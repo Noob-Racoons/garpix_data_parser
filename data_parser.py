@@ -32,7 +32,7 @@ class GLSDataParser:
                                 box['is_rotate_y'] = item['is_rotate_y']
                             except KeyError:
                                 pass
-                            box['count'] = random.randint(1, 10)
+                            box['count'] = random.randint(1, 5)
                             self._boxes.append(box)
 
     def login(self, username, password):
@@ -99,7 +99,7 @@ class GLSDataParser:
 
     def _create_boxes_set(self):
         boxes_set = []
-        boxes_count = random.randint(10, 150)
+        boxes_count = random.randint(5, 50)
         for i in range(boxes_count):
             box = random.choice(self._boxes)
             boxes_set.append(box)
